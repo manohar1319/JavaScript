@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../Form Validations/icons-1.9.1/font/bootstrap-icons.css">
+    <title>Form EX1</title>
+
+    <script>
+        function formValidations() {
+
+            //Target_uname_input  
+            var uname_input = document.getElementById('uname')
+
+
+            //errors
+            var uname_span = document.getElementById('uname_span')
+
+
+
+            //icons
+            var wrong = `<i class="bi bi-exclamation-circle-fill"></i>`
+            var right = `<i class="bi bi-check-circle-fill"></i>`
+
+            if (uname_input.value == "" || uname_input.value == undefined) 
+            {
+
+                uname_span.innerHTML = `${wrong} Enter Name`
+                uname_input.style.border = "1px solid #f00c0c"
+                uname_span.className = "text-danger" //Js_WITH_BOOTSTRAP
+                return false;
+            }
+            else 
+            {
+                uname_span.innerHTML = `${right} Thank You`
+                uname_input.style.border = "1px solid #076604"
+                uname_span.className = "text-success" //Js_WITH_BOOTSTRAP
+                return false;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <div class="container p-5 w-50">
+
+        <form 
+            onsubmit="return formValidations()" 
+            action="server.php/server.py/server.jsp/server.asp/server.js">
+
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" id="uname" />
+                <span id="uname_span"></span>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" type="submit">SEND</button>
+            </div>
+        </form>
+
+
+    </div>
+</body>
+
+</html>

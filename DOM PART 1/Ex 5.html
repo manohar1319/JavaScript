@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM PART1 EX5</title>
+
+    <script>
+        function myfun()
+        {
+            // TARGET INPUT_TAG_BY_TAGNAME_REFERENCE TO UPDATE DYNAMIC REQUEST
+
+            var input_by_tagname=document.getElementsByTagName('input')[0]
+                input_by_tagname.value="JS_RESPONSE TO INPUT"
+
+
+            // TARGET SPAN_BY_CLASS_NAME_REFERENCE TO UPDATE DYNAMIC JS_RESPONSE
+            var span_by_className=document.getElementsByClassName('ref')[0]
+                span_by_className.innerText="Thank you Javascript Updates"     
+
+           // TARGET IMG_BY_ID_NAME_REFERENCE TO UPDATE DYNAMIC JS_RESPONSE
+           var img_by_idName=document.getElementById('pic')
+               img_by_idName.src="../Images/jr ntr.jpg"
+        }
+        
+    </script>
+</head>
+
+<body>
+
+    <h1>JAVASCRIPT DOCUMENT OBJECT MODEL</h1>
+    <h1 id="res"></h1>
+    <p>
+        "The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and
+        scripts to dynamically access and update the content, structure, and style of a document."
+    </p>
+
+    <br /> <br />
+
+    <label for="">Nmae</label>
+    <input type="text" value="Hello" /><br />
+    <span class="ref"></span><br />
+
+    <br /><br />
+
+    <img id="pic" width="30%" height="250px" border="1" >
+
+    <br /><br />
+
+    <button onclick="myfun()">TEST</button>
+
+</body>
+
+</html>

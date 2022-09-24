@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM PART1 EX2</title>
+
+    <script>
+        function myfun()
+        {
+            // document.getElementsByTagName('h1')[1].innerText="Add JS_Response into HTML Document"
+            // document.getElementsByTagName('h1')[1].style.color="blue"
+
+
+            var second_h1_dom=document.getElementsByClassName('c1')[0]
+            second_h1_dom.innerText="Add JS_Response into HTML Document"
+            second_h1_dom.style.color="yellow"
+        }
+        
+    </script>
+</head>
+
+<body>
+
+    <h1>JAVASCRIPT DOCUMENT OBJECT MODEL</h1>
+    <h1 class="c1"></h1>
+    <p>
+        "The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and
+        scripts to dynamically access and update the content, structure, and style of a document."
+    </p>
+
+    <button onclick="myfun()">DOM</button>
+
+</body>
+
+</html>

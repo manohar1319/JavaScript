@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINDOW OPEN</title>
+
+    <script>
+        function myfun1()
+        {
+            window.open("https://www.facebook.com","_blank","toolbar=yes,location=yes,directories=no,status=no,")
+
+        }
+
+        function myfun2()
+        {
+            window.blur();
+        }
+
+        function myfun3()
+        {
+            window.focus();
+        }
+
+    </script>
+</head>
+<body>
+    
+    <button type="button" onclick="myfun1()">Open Window</button>
+    <button type="button" onclick="myfun2()">Blur Window</button>
+    <button type="button" onclick="myfun3()">Focus Window</button>
+</body>
+</html>
